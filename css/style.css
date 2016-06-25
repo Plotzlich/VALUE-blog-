@@ -176,13 +176,47 @@ body {
 }
 
 /* line 117, ../sass/style.scss */
-.fa-bars {
+
+/* nav-toggle */
+#nav-toggle {
   float: right;
-  font-size: 20px;
-  color: #000;
   margin: 35px 35px 0 0 !important;
-  display: none;
   cursor: pointer;
+  display:none;
+}
+
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
 
 /* header ends */
@@ -651,10 +685,11 @@ input[placeholder], [placeholder], *[placeholder] {
     background-color: #f3efe4;
   }
 
-  /* line 587, ../sass/style.scss */
-  .fa-bars {
-    display: block;
+  #nav-toggle {
+    display:block;
   }
+
+  /* line 587, ../sass/style.scss */
 }
 @media (min-width: 768px) {
   /* line 593, ../sass/style.scss */
