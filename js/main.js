@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.fa-bars').click(function (e) {
+  $('#nav-toggle').click(function (e) {
     $(this).toggleClass('active');
       $('.header .container').toggle();
         });
@@ -8,3 +8,9 @@ $(document).ready(function () {
           $('.header .container').hide();
         })
     });
+
+    document.querySelector( "#nav-toggle" )
+	  	.addEventListener( "click", function() {
+	this.classList.toggle( "active1" );
+	});
+
